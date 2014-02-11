@@ -15,9 +15,7 @@ before_install:
   - "make travis-before-install"
   - "make echo-variables"
 install: "make install"
-script: "make tests"
 
 branches:
   only:
     - master
-    - x-travis

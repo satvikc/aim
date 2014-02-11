@@ -64,18 +64,15 @@ echo-variables:
 install:
 	cp "${CABAL_CONFIG}" ./cabal.config
 	${CABAL} install --only-dependencies
-	${CABAL} configure --enable-tests --enable-benchmarks -v2;\
-	${CABAL} build;\
-	${CABAL} test;\
-	${CABAL} check;\
-	${CABAL} sdist;\
-	${CABAL} haddock;\
+	${CABAL} configure --enable-tests --enable-benchmarks -v2
+	${CABAL} build
+	${CABAL} test
+	${CABAL} check
+	${CABAL} sdist
+	${CABAL} haddock
 	${CABAL} install
 	@echo User packages installed
 	ghc-pkg list --user
-
-tests:
-	${CABAL} test
 
 #
 # Clean dirs and unregister
