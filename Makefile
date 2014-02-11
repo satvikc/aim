@@ -63,6 +63,7 @@ echo-variables:
 	@echo -e '\t'ghc,cabal: ${GHC_PKG} ${CABAL_PKG}
 
 install:
+  cp ${CABAL_CONFIG} ./cabal.config
 	${CABAL} configure --enable-tests --enable-benchmarks -v2;\
 	${CABAL} build;\
 	${CABAL} test;\
