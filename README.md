@@ -9,3 +9,9 @@ one just uses a Haskell function to generate the code.
 
 [djb]: <http://cr.yp.to/djb.html>     "Daniel Bernstein"
 [qhasm]: <http://cr.yp.to/qhasm.html> "Qhasm"
+
+[![Build Staus][travis-status]][travis-raaz]
+
+[travis-status]: <https://secure.travis-ci.org/satvikc/aim.png> "Build status"
+
+[travis-raaz]: <https://travis-ci.org/satvikc/aim>
