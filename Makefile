@@ -59,11 +59,10 @@ echo-variables:
 	@echo -e '\t'CABAL_CONFIG=${CABAL_CONFIG}
 	@echo -e '\t'GHC_VERSION=${GHC_VERSION}
 	@echo -e '\t'HASKELL_PLATFORM=${HASKELL_PLATFORM}
-
 	@echo -e '\t'ghc,cabal: ${GHC_PKG} ${CABAL_PKG}
 
 install:
-  cp ${CABAL_CONFIG} ./cabal.config
+	cp "${CABAL_CONFIG}" ./cabal.config
 	${CABAL} configure --enable-tests --enable-benchmarks -v2;\
 	${CABAL} build;\
 	${CABAL} test;\
