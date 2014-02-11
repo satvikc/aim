@@ -63,6 +63,7 @@ echo-variables:
 
 install:
 	cp "${CABAL_CONFIG}" ./cabal.config
+	${CABAL} install --only-dependencies
 	${CABAL} configure --enable-tests --enable-benchmarks -v2;\
 	${CABAL} build;\
 	${CABAL} test;\
