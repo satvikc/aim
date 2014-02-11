@@ -63,25 +63,25 @@ echo-variables:
 	@echo -e '\t'ghc,cabal: ${GHC_PKG} ${CABAL_PKG}
 
 install:
-	${CABAL} configure --enable-tests --enable-benchmarks -v2;\
-	${CABAL} build;\
-	${CABAL} test;\
-	${CABAL} check;\
-	${CABAL} sdist;\
-	${CABAL} haddock;\
+	${CABAL} configure --enable-tests --enable-benchmarks -v2
+	${CABAL} build
+	${CABAL} test
+	${CABAL} check
+	${CABAL} sdist
+	${CABAL} haddock
 	${CABAL} install
 	@echo User packages installed
 	ghc-pkg list --user
 
 tests:
-	${CABAL} test;\
+	${CABAL} test
 
 #
 # Clean dirs and unregister
 #
 
 clean:
-	./Setup.lhs clean;\
+	./Setup.lhs clean
 	ghc-pkg unregister  $(PACKAGE) --force
 
 #
