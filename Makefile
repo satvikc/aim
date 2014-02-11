@@ -67,12 +67,13 @@ install:
 	${CABAL} configure --enable-tests --enable-benchmarks -v2
 	${CABAL} build
 	${CABAL} test
-	${CABAL} check
-	${CABAL} sdist
-	${CABAL} haddock
+	${CABAL} check ;\
+	${CABAL} sdist ;\
+	${CABAL} haddock ;\
 	${CABAL} install
 	@echo User packages installed
 	ghc-pkg list --user
+
 
 #
 # Clean dirs and unregister
